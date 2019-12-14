@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapssingtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:contentScrim="?attr/colorPrimary"
+            app:title="Skuyy Apps"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            android:background="@drawable/pasuruan"
+
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarid"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+
+                >
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+
+
+
+
+        <!--        content-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kategori"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <!--                   kategori-->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+
+                        >
+                        <!--        Destinasi-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card1"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="5dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imgcard1"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/destinasi"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"></ImageView>
+
+                                <TextView
+                                    android:id="@+id/txtdestinasi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="50dp"
+                                    android:text="Destinasi"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </TextView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                        <!--akomodasi-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card2"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="5dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imgcard2"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/hotel"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"></ImageView>
+
+                                <TextView
+                                    android:id="@+id/txtakomodasi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="50dp"
+                                    android:text="Akomodasi"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </TextView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+                        <!--kuliner-->
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card3"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_margin="10dp"
+                            android:clickable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardCornerRadius="5dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imgcard3"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="8dp"
+                                    android:src="@drawable/kuliner"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"></ImageView>
+
+                                <TextView
+                                    android:id="@+id/txtkuliner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="50dp"
+                                    android:text="Kuliner"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                </TextView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+<!--                        &lt;!&ndash;menu&ndash;&gt;-->
+<!--                        <androidx.cardview.widget.CardView-->
+<!--                            android:id="@+id/card4"-->
+<!--                            android:layout_width="120dp"-->
+<!--                            android:layout_height="120dp"-->
+<!--                            android:layout_margin="10dp"-->
+<!--                            android:clickable="true"-->
+<!--                            android:foreground="?android:attr/selectableItemBackground"-->
+<!--                            app:cardCornerRadius="5dp">-->
+
+<!--                            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent">-->
+
+<!--                                <ImageView-->
+<!--                                    android:id="@+id/imgcard4"-->
+<!--                                    android:layout_width="50dp"-->
+<!--                                    android:layout_height="50dp"-->
+<!--                                    android:layout_marginTop="8dp"-->
+<!--                                    android:src="@drawable/kereta_api"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                                    app:layout_constraintVertical_bias="0.0"></ImageView>-->
+
+<!--                                <TextView-->
+<!--                                    android:id="@+id/txtmenu"-->
+<!--                                    android:layout_width="wrap_content"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:layout_marginTop="50dp"-->
+<!--                                    android:text="Tiket Kereta"-->
+<!--                                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                                </TextView>-->
+<!--                            </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                        </androidx.cardview.widget.CardView>-->
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <!--                   list-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Destinasi Terpopuler"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:textStyle="bold">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="25dp"
+
+                    >
+                    <!--                       card1-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="5dp"
+                        android:clickable="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="5dp"
+                                android:clickable="true"
+
+                                android:id="@+id/imgcard_1"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp"
+                                    android:orientation="horizontal"
+                                    android:src="@drawable/saygon"
+                                    android:scaleType="centerCrop">
+
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Saygon Waterpark"
+                                    android:layout_gravity="left"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#000"
+                                    >
+                                </TextView>
+                                <RatingBar
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:rating="4.5"
+                                    style="@style/Widget.AppCompat.RatingBar.Small">
+                                </RatingBar>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Saygon Waterpark merupakan salah satu destinasi yang mempunyai berbagai wahana seperti kolam renang, dan berbagai permainan">
+                            </TextView>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.50.000"
+                                    android:textStyle="bold"
+                                    android:textSize="18dp"
+                                    android:textColor="#000"
+                                    android:layout_centerHorizontal="true"
+                                    >
+
+                                </TextView>
+                            </RelativeLayout>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="5dp"
+                                android:layout_marginTop="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/btn_beli"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:paddingVertical="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Beli Tiket"
+                                        android:textColor="@android:color/background_light"
+                                        android:fontFamily="sans-serif"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!--                       card2-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@id/card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="5dp"
+                        android:clickable="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="5dp"
+                                android:clickable="true"
+
+                                android:id="@+id/imgcard_2"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp"
+                                    android:orientation="horizontal"
+                                    android:src="@drawable/kebunkurma"
+                                    android:scaleType="centerCrop">
+
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kebun Kurma"
+                                    android:layout_gravity="left"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#000"
+                                    >
+                                </TextView>
+                                <RatingBar
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:rating="5"
+                                    style="@style/Widget.AppCompat.RatingBar.Small">
+                                </RatingBar>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Buah kurma hanya tumbuh di negara timur tengah, tetapi anda akan dibuat heran ketika mendengar ternyata buah kurma dapat tumbuh subur di tanah Indonesia yakni seperti di kebun kurma Pasuruan">
+                            </TextView>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.15.000"
+                                    android:textStyle="bold"
+                                    android:textSize="18dp"
+                                    android:textColor="#000"
+                                    android:layout_centerHorizontal="true"
+                                    >
+
+                                </TextView>
+                            </RelativeLayout>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="5dp"
+                                android:layout_marginTop="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@id/btn_beli"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:paddingVertical="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Beli Tiket"
+                                        android:textColor="@android:color/background_light"
+                                        android:fontFamily="sans-serif"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!--                       card3-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@id/card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="5dp"
+                        android:clickable="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="5dp"
+                                android:clickable="true"
+
+                                android:id="@+id/imgcard_3"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp"
+                                    android:orientation="horizontal"
+                                    android:src="@drawable/rafting"
+                                    android:scaleType="centerCrop">
+
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jempinang Rafting"
+                                    android:layout_gravity="left"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#000"
+                                    >
+                                </TextView>
+                                <RatingBar
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:rating="3.9"
+                                    style="@style/Widget.AppCompat.RatingBar.Small">
+                                </RatingBar>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Fun Rafting dan River Board dapat menjadi alternatif kegiatan yang mengasyikkan">                            </TextView>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.25.000"
+                                    android:textStyle="bold"
+                                    android:textSize="18dp"
+                                    android:textColor="#000"
+                                    android:layout_centerHorizontal="true"
+                                    >
+
+                                </TextView>
+                            </RelativeLayout>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="5dp"
+                                android:layout_marginTop="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@id/btn_beli"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:paddingVertical="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Beli Tiket"
+                                        android:textColor="@android:color/background_light"
+                                        android:fontFamily="sans-serif"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!--                       card4-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@id/card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="5dp"
+                        android:clickable="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="5dp"
+                                android:clickable="true"
+
+                                android:id="@+id/imgcard_4"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp"
+                                    android:orientation="horizontal"
+                                    android:src="@drawable/lipi"
+                                    android:scaleType="centerCrop">
+
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Kebun Raya Purwodadi"
+                                    android:layout_gravity="left"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#000"
+                                    >
+                                </TextView>
+                                <RatingBar
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:rating="3.9"
+                                    style="@style/Widget.AppCompat.RatingBar.Small">
+                                </RatingBar>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Kebun Raya Purwodadi adalah sebuah kebun penelitian besar yang terletak di Purwodadi, Pasuruan, Jawa Timur, Indonesia.">
+                            </TextView>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.10.000"
+                                    android:textStyle="bold"
+                                    android:textSize="18dp"
+                                    android:textColor="#000"
+                                    android:layout_centerHorizontal="true"
+                                    >
+
+                                </TextView>
+                            </RelativeLayout>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="5dp"
+                                android:layout_marginTop="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@id/btn_beli"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:paddingVertical="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Beli Tiket"
+                                        android:textColor="@android:color/background_light"
+                                        android:fontFamily="sans-serif"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <!--                       card5-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@id/card_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="5dp"
+                        android:clickable="true"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="5dp"
+                                android:clickable="true"
+
+                                android:id="@+id/imgcard_5"
+                                >
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="210dp"
+                                    android:orientation="horizontal"
+                                    android:src="@drawable/kakebodo"
+                                    android:scaleType="centerCrop">
+
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Air Terjun Kakebodo"
+                                    android:layout_gravity="left"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:textColor="#000"
+                                    >
+                                </TextView>
+                                <RatingBar
+                                    android:layout_marginTop="3dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:rating="3.1"
+                                    style="@style/Widget.AppCompat.RatingBar.Small">
+                                </RatingBar>
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="Air Terjun Kakek Bodo Pasuruan merupakan sebuah air terjun setinggi 40 meter yang berada di lereng Gunung Arjuno, dan menjadi salah satu destinasi wisata favorit di Pasuruan">
+                            </TextView>
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginVertical="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp.10.000"
+                                    android:textStyle="bold"
+                                    android:textSize="18dp"
+                                    android:textColor="#000"
+                                    android:layout_centerHorizontal="true"
+                                    >
+
+                                </TextView>
+                            </RelativeLayout>
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:clickable="true"
+                                app:cardBackgroundColor="@color/colorPrimary"
+                                app:cardCornerRadius="5dp"
+                                android:layout_marginTop="12dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@id/btn_beli"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:paddingVertical="10dp">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+
+                                        android:text="Beli Tiket"
+                                        android:textColor="@android:color/background_light"
+                                        android:fontFamily="sans-serif"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        />
+
+
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
